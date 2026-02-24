@@ -42,10 +42,14 @@ public class Main {
                if(!d1.getValue().equals(d2.getValue())){
                    conflictdata.add(d2);
                    conflictdata.add(d1);
+                   map.remove(d2.getKey());
                    break;
                }
-           }else
-               map.put(d2.getKey(),d2);
+           }else{
+
+              map.put(d2.getKey(),d2);
+          }
+
        }
         finaldata.addAll(map.values());
 
